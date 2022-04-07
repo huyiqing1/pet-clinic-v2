@@ -79,4 +79,12 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>pet-clinic</id>
+			<name>pet-clinic repository</name>
+			<url>https://springframework-pet-clinic.herokuapp.com/</url>
+		</repository>
+	</distributionManagement>
+
 </project>
