@@ -1,6 +1,6 @@
 package springframework.pracitce.Services;
 
-import springframework.pracitce.Models.Speciality;
+import springframework.pracitce.Models.Specialty;
 
-public interface SpecialtyService extends CrudService<Speciality, Long> {
+public interface SpecialtyService extends CrudService<Specialty, Long> {
 }
