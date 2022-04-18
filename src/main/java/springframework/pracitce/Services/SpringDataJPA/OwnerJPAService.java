@@ -1,7 +1,7 @@
 package springframework.pracitce.Services.SpringDataJPA;
 
 import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import springframework.pracitce.Models.Owner;
 import springframework.pracitce.Repositories.OwnerRepository;
 import springframework.pracitce.Repositories.PetRepository;
@@ -11,7 +11,7 @@ import springframework.pracitce.Services.OwnerService;
 import java.util.HashSet;
 import java.util.Set;
 
-@Component
+@Service
 @Profile("SpringDataJPA")
 public class OwnerJPAService implements OwnerService {
 
