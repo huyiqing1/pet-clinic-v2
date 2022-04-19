@@ -1,5 +1,6 @@
 package springframework.pracitce.Services.Map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import springframework.pracitce.Models.Specialty;
 import springframework.pracitce.Services.SpecialtyService;
@@ -7,6 +8,7 @@ import springframework.pracitce.Services.SpecialtyService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialtyServiceMap extends AbstractServiceMap<Specialty, Long> implements SpecialtyService {
 
     @Override

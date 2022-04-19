@@ -1,5 +1,6 @@
 package springframework.pracitce.Services.Map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import springframework.pracitce.Models.Specialty;
 import springframework.pracitce.Models.Vet;
@@ -9,6 +10,7 @@ import springframework.pracitce.Services.VetService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetServiceMap extends AbstractServiceMap<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
