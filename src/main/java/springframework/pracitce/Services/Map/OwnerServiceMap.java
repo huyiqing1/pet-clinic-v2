@@ -8,6 +8,7 @@ import springframework.pracitce.Services.OwnerService;
 import springframework.pracitce.Services.PetService;
 import springframework.pracitce.Services.PetTypeService;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -65,6 +66,11 @@ public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements 
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return null;
     }
 
     @Override
