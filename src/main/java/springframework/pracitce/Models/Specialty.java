@@ -17,4 +17,9 @@ public class Specialty extends BaseEntity {
 
     @Column(name = "description")
     private String description;
+
+    @Override
+    public String toString() {
+        return description;
+    }
 }

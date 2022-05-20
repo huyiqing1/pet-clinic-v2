@@ -23,4 +23,13 @@ public class Visit extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
+
+    @Override
+    public String toString() {
+        return "Visit{" +
+                "date=" + date +
+                ", description='" + description + '\'' +
+                ", pet=" + pet +
+                '}';
+    }
 }
