@@ -3,13 +3,14 @@ package springframework.pracitce.Controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import springframework.pracitce.Models.Pet;
 import springframework.pracitce.Models.Visit;
 import springframework.pracitce.Services.PetService;
 import springframework.pracitce.Services.VisitService;
+
+import javax.validation.Valid;
 
 @Controller
 public class VisitController {
@@ -43,7 +44,7 @@ public class VisitController {
     }
 
     @PostMapping("owners/{ownerId}/pets/{petId}/visits/new")
-    public String processNewVisitForm(@Validated Visit visit, @PathVariable Long ownerId, BindingResult result) {
+    public String processNewVisitForm(@Valid Visit visit, @PathVariable Long ownerId, BindingResult result) {
         if (result.hasErrors()) {
             return VIEWS_VISIT_CREATE_OR_UPDATE_FORM;
         } else {
